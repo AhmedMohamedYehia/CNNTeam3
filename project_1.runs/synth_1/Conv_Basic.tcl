@@ -14,7 +14,11 @@ set_property parent.project_path {D:/Spring 2020/Logic 2/CNN/project_1/project_1
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-read_verilog -library xil_defaultlib {{D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v}}
-synth_design -top FPMU1 -part xc7z020clg400-1
-write_checkpoint -noxdef FPMU1.dcp
-catch { report_utilization -file FPMU1_utilization_synth.rpt -pb FPMU1_utilization_synth.pb }
+read_verilog -library xil_defaultlib {
+  {D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v}
+  {D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/ADD.v}
+  {D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/Conv_Basic.v}
+}
+synth_design -top Conv_Basic -part xc7z020clg400-1
+write_checkpoint -noxdef Conv_Basic.dcp
+catch { report_utilization -file Conv_Basic_utilization_synth.rpt -pb Conv_Basic_utilization_synth.pb }

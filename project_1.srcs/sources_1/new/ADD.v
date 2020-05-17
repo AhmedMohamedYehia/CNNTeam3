@@ -1,4 +1,4 @@
-module fp_add (
+module Fp_Add (
 input [31:0] A_FP, 
 input [31:0] B_FP,
 output reg  sign, 

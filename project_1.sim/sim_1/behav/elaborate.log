@@ -1,0 +1,38 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: D:/VIVADOSETUP/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Conv_Basic_tb_behav xil_defaultlib.Conv_Basic_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 288 differs from formal bit length 289 for port imageArray [D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sim_1/new/Conv_Basic_tb.v:43]
+WARNING: [VRFC 10-278] actual bit length 288 differs from formal bit length 289 for port filterArray [D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sim_1/new/Conv_Basic_tb.v:44]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/ADD.v" Line 1. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/ADD.v" Line 1. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Spring 2020/Logic 2/CNN/project_1/project_1.srcs/sources_1/new/MUL.v" Line 23. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.Fp_Mul
+Compiling module xil_defaultlib.Conv_Basic_default
+Compiling module xil_defaultlib.Conv_Basic_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot Conv_Basic_tb_behav

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log FPMU1.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FPMU1.tcl" );
+         "-log Conv_Basic.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Conv_Basic.tcl" );
 
 
 

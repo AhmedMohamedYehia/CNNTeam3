@@ -1,13 +1,13 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun May 17 21:48:01 2020
+| Date         : Mon May 18 01:27:41 2020
 | Host         : DESKTOP-H2CR2Q8 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file FPMU1_utilization_synth.rpt -pb FPMU1_utilization_synth.pb
-| Design       : FPMU1
+| Command      : report_utilization -file Conv_Basic_utilization_placed.rpt -pb Conv_Basic_utilization_placed.pb
+| Design       : Conv_Basic
 | Device       : xc7z020
-| Design State : Synthesized
------------------------------------------------------------------------------------------------------
+| Design State : Fully Placed
+-----------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -15,14 +15,15 @@ Table of Contents
 -----------------
 1. Slice Logic
 1.1 Summary of Registers by Type
-2. Memory
-3. DSP
-4. IO and GT Specific
-5. Clocking
-6. Specific Feature
-7. Primitives
-8. Black Boxes
-9. Instantiated Netlists
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
 
 1. Slice Logic
 --------------
@@ -30,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   20 |     0 |     53200 |  0.04 |
-|   LUT as Logic          |   20 |     0 |     53200 |  0.04 |
+| Slice LUTs              |  352 |     0 |     53200 |  0.66 |
+|   LUT as Logic          |  352 |     0 |     53200 |  0.66 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |    0 |     0 |    106400 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
@@ -39,7 +40,6 @@ Table of Contents
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
-* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
 1.1 Summary of Registers by Type
@@ -61,7 +61,32 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 
 
-2. Memory
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------------------------+---------+-------+-----------+-------+
+|                          Site Type                          |   Used  | Fixed | Available | Util% |
++-------------------------------------------------------------+---------+-------+-----------+-------+
+| Slice                                                       |     100 |     0 |     13300 |  0.75 |
+|   SLICEL                                                    |      74 |     0 |           |       |
+|   SLICEM                                                    |      26 |     0 |           |       |
+| LUT as Logic                                                |     352 |     0 |     53200 |  0.66 |
+|   using O5 output only                                      |       0 |       |           |       |
+|   using O6 output only                                      |     273 |       |           |       |
+|   using O5 and O6                                           |      79 |       |           |       |
+| LUT as Memory                                               |       0 |     0 |     17400 |  0.00 |
+|   LUT as Distributed RAM                                    |       0 |     0 |           |       |
+|   LUT as Shift Register                                     |       0 |     0 |           |       |
+| LUT Flip Flop Pairs                                         |     352 |     0 |     53200 |  0.66 |
+|   fully used LUT-FF pairs                                   |       0 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |       0 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |     352 |       |           |       |
+| Unique Control Sets                                         |       0 |       |           |       |
+| Minimum number of registers lost to control set restriction | 0(Lost) |       |           |       |
++-------------------------------------------------------------+---------+-------+-----------+-------+
+
+
+3. Memory
 ---------
 
 +----------------+------+-------+-----------+-------+
@@ -74,24 +99,25 @@ Table of Contents
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
 
-3. DSP
+4. DSP
 ------
 
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |    2 |     0 |       220 |  0.91 |
-|   DSP48E1 only |    2 |       |           |       |
-+----------------+------+-------+-----------+-------+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |       220 |  0.00 |
++-----------+------+-------+-----------+-------+
 
 
-4. IO and GT Specific
+5. IO and GT Specific
 ---------------------
 
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   96 |     0 |       125 | 76.80 |
+| Bonded IOB                  |   34 |     0 |       125 | 27.20 |
+|   IOB Master Pads           |   16 |       |           |       |
+|   IOB Slave Pads            |   17 |       |           |       |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -108,7 +134,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 
 
-5. Clocking
+6. Clocking
 -----------
 
 +------------+------+-------+-----------+-------+
@@ -124,7 +150,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 
 
-6. Specific Feature
+7. Specific Feature
 -------------------
 
 +-------------+------+-------+-----------+-------+
@@ -141,23 +167,25 @@ Table of Contents
 +-------------+------+-------+-----------+-------+
 
 
-7. Primitives
+8. Primitives
 -------------
 
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   64 |                  IO |
+| LUT6     |  153 |                 LUT |
+| LUT3     |   96 |                 LUT |
+| LUT5     |   95 |                 LUT |
+| CARRY4   |   48 |          CarryLogic |
+| LUT2     |   43 |                 LUT |
+| LUT4     |   35 |                 LUT |
 | OBUF     |   32 |                  IO |
-| LUT3     |   23 |                 LUT |
-| LUT4     |    7 |                 LUT |
-| LUT2     |    7 |                 LUT |
-| DSP48E1  |    2 |    Block Arithmetic |
-| CARRY4   |    2 |          CarryLogic |
+| LUT1     |    9 |                 LUT |
+| IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
 
-8. Black Boxes
+9. Black Boxes
 --------------
 
 +----------+------+
@@ -165,8 +193,8 @@ Table of Contents
 +----------+------+
 
 
-9. Instantiated Netlists
-------------------------
+10. Instantiated Netlists
+-------------------------
 
 +----------+------+
 | Ref Name | Used |

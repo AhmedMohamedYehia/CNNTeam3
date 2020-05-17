@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1589744867">
-  <File Type="RDS-DCP" Name="FPMU1.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1589758100">
+  <File Type="RDS-DCP" Name="Conv_Basic.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="FPMU1_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="Conv_Basic_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="FPMU1_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="FPMU1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Conv_Basic_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Conv_Basic.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="FPMU1.vds"/>
-  <File Type="RDS-UTIL" Name="FPMU1_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FPMU1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FPMU1_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="Conv_Basic.vds"/>
+  <File Type="RDS-UTIL" Name="Conv_Basic_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Conv_Basic_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Conv_Basic_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/MUL.v">
@@ -22,7 +22,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ADD.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Conv_Basic.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -30,7 +36,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="FPMU1"/>
+      <Option Name="TopModule" Val="Conv_Basic"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

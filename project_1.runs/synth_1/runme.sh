@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log FPMU1.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FPMU1.tcl
+EAStep vivado -log Conv_Basic.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Conv_Basic.tcl

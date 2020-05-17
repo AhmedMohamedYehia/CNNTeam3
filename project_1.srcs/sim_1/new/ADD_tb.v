@@ -1,100 +1,52 @@
-module fp_add (
-input [31:0] A_FP, 
-input [31:0] B_FP,
-output reg  sign, 
-output reg [7:0] exponent, 
-output reg [22:0] mantissa);
-
-//variables used in an always block
-//are declared as registers
-reg sign_a, sign_b,sign_c;
-reg [7:0] e_A, e_B;
-reg [23:0] fract_a, fract_b,fract_c;//frac = 1 . mantissa 
-reg [7:0] shift_cnt;
-reg cout;
-integer i;
-
-always @ (A_FP , B_FP)
-begin
-	sign_a  = A_FP [31];
-	sign_b  = B_FP [31];
-	e_A      = A_FP [30:23];
-	e_B      = B_FP [30:23];
-	fract_a  = {1'b1,A_FP [22:0]};
-	fract_b  = {1'b1,B_FP [22:0]};
-	//align fractions
-	if (e_A < e_B)
+//test bench for floating-point addition
+module add_flp3_tb;
+    reg [31:0] A, B;
+    wire sign_C;
+    wire [7:0] exp_C;
+    wire [22:0] mantissa_C;
+    initial //display variables
+    $monitor ("sign=%b, exp_biased=%b, sum=%b",
+    sign_C, exp_C, mantissa_C);
+    initial //apply input vectors
     begin
-	   shift_cnt  = e_B - e_A;
-       fract_a   = fract_a >> shift_cnt;
-       e_A   = e_A + shift_cnt;      
-    end 
-    
-	if (e_B < e_A)
-    begin
-		shift_cnt  = e_A - e_B;
-    	fract_b  = fract_b >> shift_cnt;
-	    e_B  = e_B + shift_cnt;
-    end 
-    
-    
-    //Handling the sign
-    if(fract_a >= fract_b)
-    begin
-        sign=sign_a;
-    end
-    else
-    begin
-        sign=sign_b;
+        //-7.25 + + 0.375 = -6.875 (11000000110111000000000000000000) 
+        // s ----e---- --------------M-------------
+        #0 A = 32'b11000000111010000000000000000000;
+           B = 32'b00111110110000000000000000000000;
+           
+           
+        //7.25 + - 0.375 = +6.875 (01000000110111000000000000000000)
+        // s ----e---- --------------M-------------
+         #10 A = 32'b01000000111010000000000000000000;
+            B = 32'b10111110110000000000000000000000;   
+           
+        //+6 + +7 = +13 (01000001010100000000000000000000) 
+        // s ----e---- --------------M-------------
+        #30 A = 32'b01000000110000000000000000000000;
+            B = 32'b01000000111000000000000000000000;
+            
+         //+1.9 + +2.8 = +4.7 (01000000100101100110011001100110) 
+         // s ----e---- --------------M-------------
+         #40 A = 32'b00111111111100110011001100110011;
+             B = 32'b01000000001100110011001100110011;    
+             
+             
+          //+1.9 + -2.8 = -0.9 (10111111011001100110011001100110) 
+          // s ----e---- --------------M-------------
+          #50 A = 32'b00111111111100110011001100110011;
+              B = 32'b11000000001100110011001100110011;        
+            
+            
+            
+            
+        #60 $stop;
     end
     
-    
-	//add fractions
-	if(sign_a == sign_b) 
-	   begin
-	       {cout, fract_c}  = fract_a + fract_b;
-	       //normalize result
-            if (cout == 1)
-                begin
-                  {cout, fract_c}  = {cout, fract_c} >> 1;
-                  e_B  = e_B + 1;
-                end
-	   end
-	else
-	   begin
-	      if(sign_a && !sign_b)
-              begin
-                  fract_b = 24'b111111111111111111111111 - fract_b;
-                  fract_b = fract_b + 1;
-                  {cout, fract_c}  = fract_a + fract_b;
-              end
-           else
-              begin
-                  fract_a = 24'b111111111111111111111111 - fract_a;
-                  fract_a = fract_a + 1;
-                  {cout, fract_c}  = fract_a + fract_b;
-              end
-              
-          if (cout == 0)
-          begin
-                    fract_c = 24'b111111111111111111111111 - fract_c;
-                    fract_c = fract_c + 1;
-                    for(i=47; i>0 && fract_c[23]==0 ; i=i-1)
-                                   begin
-                                        fract_c <= fract_c << 1;
-                                        e_B <= e_B - 1;
-                                   end
-                    fract_c <= fract_c << 1;
-                    e_B <= e_B - 1;               
-          end
-          else         
-              begin
-              end
-         
-	 end   
-	exponent  = e_B;
-	mantissa  = fract_c[22:0];
-	
-	
-end
+    Fp_Add fp_add1 ( //instantiate the module
+    .A_FP(A),
+    .B_FP(B),
+    .sign(sign_C),
+    .exponent(exp_C),
+    .mantissa(mantissa_C)
+    );
 endmodule

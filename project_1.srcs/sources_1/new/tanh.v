@@ -30,6 +30,7 @@ module tanh
  begin
     if(reset == 1)
     begin
+        i=0;
     end
     else if(i==0)
     begin
@@ -59,7 +60,7 @@ module tanh
     else if(i==4)
     begin
         mul1=x3;    //Assigning x^3 to the multiplier input
-        mul2=32'b00111110101010101010101010101011;  //Assigning 1/3 to the multiplier input
+        mul2=32'b10111110101010101010101010101011;  //Assigning 1/3 to the multiplier input
         i=i+1;
     end
     else if(i==5)

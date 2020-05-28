@@ -1,13 +1,12 @@
-
-*** Running vivado
-    with args -log Fp_Add.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Fp_Add.tcl
-
-
-****** Vivado v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri May 29 00:28:11 2020
+# Process ID: 13948
+# Log file: C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.runs/synth_1/Fp_Add.vds
+# Journal file: C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source Fp_Add.tcl -notrace
 Command: synth_design -top Fp_Add -part xc7z020clg400-1
 Starting synth_design

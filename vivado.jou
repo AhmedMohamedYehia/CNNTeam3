@@ -177,3 +177,576 @@ update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+run all
+close_sim
+launch_simulation
+source tanh_tb.tcl
+close_sim
+launch_simulation
+source tanh_tb.tcl
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top add_flp3_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tanh_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tanh_tb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Fp_Add [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source Fp_Add.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top add_flp3_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Fp_Add [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+add_bp {C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.srcs/sources_1/new/ADD.v} 85
+remove_bps -file {C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.srcs/sources_1/new/ADD.v} -line 85
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source add_flp3_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+close_sim
+launch_simulation
+source add_flp3_tb.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log tanh.vds -m64 -mode batch -messageDb vivado.pb -notrace -source tanh.tcl
+EAStep vivado -log Fp_Add.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Fp_Add.tcl

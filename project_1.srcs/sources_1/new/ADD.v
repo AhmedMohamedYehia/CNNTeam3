@@ -8,9 +8,6 @@ input [(dataWidth-1):0] A_FP,  //Represents the first input of the floating poin
 input [(dataWidth-1):0] B_FP,  //Represents the second input of the floating point adder
 output reg [(dataWidth-1):0] SUM_FP    //Represents the output of the floating point adder
 );
-   //Total data width
-   //Mantissa data width
-    //Exponent data width
 //variables used in an always block
 //are declared as registers
 reg sign_a, sign_b,sign_c;
@@ -21,6 +18,9 @@ reg cout;
 reg  sign; 
 reg [(exponentWidth-1):0] exponent; 
 reg [(mantissaWidth-1):0] mantissa;
+reg  signTemp;
+reg [(exponentWidth-1):0]expTemp;
+reg  [mantissaWidth:0]mantissaTemp;
 integer i;
 
 always @ (A_FP , B_FP)
@@ -31,25 +31,31 @@ begin
 	e_B      = B_FP [(dataWidth-1):mantissaWidth];
 	fract_a  = {1'b1,A_FP [(mantissaWidth-1):0]};
 	fract_b  = {1'b1,B_FP [(mantissaWidth-1):0]};
+
 	//align fractions
 	if (e_A < e_B)
     begin
-	   shift_cnt  = e_B - e_A;
-       fract_a   = fract_a >> shift_cnt;
-       e_A   = e_A + shift_cnt;      
+	    signTemp = sign_a;
+	    expTemp = e_A;
+	    mantissaTemp = fract_a;   
+	    
+	    sign_a = sign_b;
+	    e_A = e_B;
+	    fract_a =fract_b;
+	    
+	    sign_b = signTemp;
+	    e_B = expTemp;
+	    fract_b = mantissaTemp;
     end 
     
-	if (e_B < e_A)
-    begin
-		shift_cnt  = e_A - e_B;
-    	fract_b  = fract_b >> shift_cnt;
-	    e_B  = e_B + shift_cnt;
-    end 
+
     
+    shift_cnt = e_A - e_B;
+    fract_b = fract_b >> shift_cnt;
+    e_B = e_B + shift_cnt;
     
-    //Calculating the sign of the output floating point
-    if(fract_a >= fract_b)
-    begin
+    if(fract_a>=fract_b)
+    begin   
         sign=sign_a;
     end
     else
@@ -57,59 +63,40 @@ begin
         sign=sign_b;
     end
     
+    if (sign_a == sign_b)
+    begin
+        {cout,fract_c} = fract_a + fract_b;
+        if(cout==1)
+        begin
+            fract_c = fract_c >> 1;
+            e_B = e_B + 1;
+        end
+    end
+    else
+    begin
+        fract_b = 24'b111111111111111111111111 - fract_b;
+        //fract_b = 10'b1111111111 - fract_b;
+        fract_b = fract_b +1;
+        {cout,fract_c} = fract_a + fract_b;
+        if(cout == 0)
+        begin
+            fract_c = 24'b111111111111111111111111 - fract_c;
+            //fract_c = 10'b11111111111 - fract_c;
+            fract_c = fract_c +1;
+        end 
+    end
+    if ((sign_a==sign_b && cout==0) || sign_a != sign_b)
+    begin
+    for(i=(mantissaWidth+1); i>0 && fract_c[mantissaWidth]==0 ; i=i-1)
+    begin
+         fract_c = fract_c << 1;
+         e_B = e_B - 1;
+    end       
+    end
+    exponent = e_B;
+    mantissa = fract_c[(mantissaWidth-1):0];
+    SUM_FP = {sign,e_B,mantissa};   
     
-	//Adding both fractions
-	if(sign_a == sign_b) 
-	   begin
-	       {cout, fract_c}  = fract_a + fract_b;
-	       //Normalizing the result
-            if (cout == 1)
-                begin
-                  {cout, fract_c}  = {cout, fract_c} >> 1;
-                  e_B  = e_B + 1;
-                end
-	   end
-	else
-	   begin
-	      if(sign_a && !sign_b)
-              begin
-              
-                  fract_b = 24'b111111111111111111111111 - fract_b;
-                  //fract_b = 11'b11111111111 - fract_b;
-                  
-                  fract_b = fract_b + 1;
-                  {cout, fract_c}  = fract_a + fract_b;
-              end
-           else
-              begin
-                  fract_a = 24'b111111111111111111111111 - fract_a;
-                  //fract_a = 11'b11111111111 - fract_a;
-                  fract_a = fract_a + 1;
-                  {cout, fract_c}  = fract_a + fract_b;
-              end
-              
-          if (cout == 0)
-          begin
-                    fract_c = 24'b111111111111111111111111 - fract_c;
-                    //fract_c = 11'b11111111111 - fract_c;
-                    fract_c = fract_c + 1;
-                    for(i=(mantissaWidth*2+1); i>0 && fract_c[mantissaWidth]==0 ; i=i-1)
-                                   begin
-                                        fract_c <= fract_c << 1;
-                                        e_B <= e_B - 1;
-                                   end
-                    fract_c <= fract_c << 1;
-                    e_B <= e_B - 1;               
-          end
-          else         
-              begin
-              end
-         
-	 end   
-	exponent  = e_B;
-	mantissa  = fract_c[(mantissaWidth-1):0];
-	SUM_FP = {sign, exponent, mantissa};
-	
 	
 end
 endmodule

@@ -2,7 +2,7 @@
 //It can work either full precision or half precision based on dataWidth parameter
 
 module Fp_Add 
-#(parameter mantissaWidth = 10, parameter dataWidth = 16, parameter exponentWidth = 5)
+#(parameter mantissaWidth = 23, parameter dataWidth = 32, parameter exponentWidth = 8)
 (
 input [(dataWidth-1):0] A_FP,  //Represents the first input of the floating point adder
 input [(dataWidth-1):0] B_FP,  //Represents the second input of the floating point adder
@@ -74,24 +74,24 @@ begin
 	      if(sign_a && !sign_b)
               begin
               
-                  //fract_b = 24'b111111111111111111111111 - fract_b;
-                  fract_b = 11'b11111111111 - fract_b;
+                  fract_b = 24'b111111111111111111111111 - fract_b;
+                  //fract_b = 11'b11111111111 - fract_b;
                   
                   fract_b = fract_b + 1;
                   {cout, fract_c}  = fract_a + fract_b;
               end
            else
               begin
-                  //fract_a = 24'b111111111111111111111111 - fract_a;
-                  fract_a = 11'b11111111111 - fract_a;
+                  fract_a = 24'b111111111111111111111111 - fract_a;
+                  //fract_a = 11'b11111111111 - fract_a;
                   fract_a = fract_a + 1;
                   {cout, fract_c}  = fract_a + fract_b;
               end
               
           if (cout == 0)
           begin
-                    //fract_c = 24'b111111111111111111111111 - fract_c;
-                    fract_c = 11'b11111111111 - fract_c;
+                    fract_c = 24'b111111111111111111111111 - fract_c;
+                    //fract_c = 11'b11111111111 - fract_c;
                     fract_c = fract_c + 1;
                     for(i=(mantissaWidth*2+1); i>0 && fract_c[mantissaWidth]==0 ; i=i-1)
                                    begin

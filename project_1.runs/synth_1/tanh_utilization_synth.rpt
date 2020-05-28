@@ -1,13 +1,13 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu May 28 13:02:06 2020
+| Date         : Thu May 28 15:58:35 2020
 | Host         : DESKTOP-IUIQ2E0 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file Fp_Mul_utilization_synth.rpt -pb Fp_Mul_utilization_synth.pb
-| Design       : Fp_Mul
+| Command      : report_utilization -file tanh_utilization_synth.rpt -pb tanh_utilization_synth.pb
+| Design       : tanh
 | Device       : xc7z020
 | Design State : Synthesized
--------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   12 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |   12 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |  507 |     0 |     53200 |  0.95 |
+|   LUT as Logic          |  507 |     0 |     53200 |  0.95 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |    0 |     0 |    106400 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
+| Slice Registers         |  208 |     0 |    106400 |  0.20 |
+|   Register as Flip Flop |  208 |     0 |    106400 |  0.20 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 18    |          Yes |         Set |            - |
+| 190   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    1 |     0 |       220 |  0.45 |
-|   DSP48E1 only |    1 |       |           |       |
+| DSPs           |    2 |     0 |       220 |  0.91 |
+|   DSP48E1 only |    2 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   48 |     0 |       125 | 38.40 |
+| Bonded IOB                  |   65 |     0 |       125 | 52.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -114,7 +114,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        16 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         4 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         4 |  0.00 |
@@ -147,14 +147,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   32 |                  IO |
-| OBUF     |   16 |                  IO |
-| LUT3     |   10 |                 LUT |
-| LUT5     |    3 |                 LUT |
-| LUT6     |    2 |                 LUT |
-| LUT4     |    2 |                 LUT |
-| LUT2     |    2 |                 LUT |
-| DSP48E1  |    1 |    Block Arithmetic |
+| LUT6     |  230 |                 LUT |
+| FDRE     |  190 |        Flop & Latch |
+| LUT2     |  104 |                 LUT |
+| LUT4     |   99 |                 LUT |
+| LUT3     |   67 |                 LUT |
+| CARRY4   |   52 |          CarryLogic |
+| LUT1     |   48 |                 LUT |
+| IBUF     |   33 |                  IO |
+| OBUF     |   32 |                  IO |
+| LUT5     |   32 |                 LUT |
+| FDSE     |   18 |        Flop & Latch |
+| DSP48E1  |    2 |    Block Arithmetic |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 

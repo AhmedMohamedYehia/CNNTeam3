@@ -1,16 +1,18 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot FPMU1_tb_behav xil_defaultlib.FPMU1_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tanh_tb_behav xil_defaultlib.tanh_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Fp_Mul
-Compiling module xil_defaultlib.FPMU1_tb
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.tanh
+Compiling module xil_defaultlib.tanh_tb
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot FPMU1_tb_behav
+Built simulation snapshot tanh_tb_behav

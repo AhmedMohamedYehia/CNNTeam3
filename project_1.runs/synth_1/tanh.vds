@@ -1,13 +1,12 @@
-
-*** Running vivado
-    with args -log tanh.vds -m64 -mode batch -messageDb vivado.pb -notrace -source tanh.tcl
-
-
-****** Vivado v2015.2 (64-bit)
-  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
-  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu May 28 15:58:17 2020
+# Process ID: 16952
+# Log file: C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.runs/synth_1/tanh.vds
+# Journal file: C:/Users/ziads/Desktop/Junior2/LogicDesign2/Final Assemnet/CNNTeam3/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source tanh.tcl -notrace
 Command: synth_design -top tanh -part xc7z020clg400-1
 Starting synth_design

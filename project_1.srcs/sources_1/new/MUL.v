@@ -1,7 +1,7 @@
 //This module is responsible to multiply two floating points
 //It can work either full precision or half precision based on dataWidth parameter
 module Fp_Mul
-#(parameter mantissaWidth = 10, parameter dataWidth = 16, parameter exponentWidth = 5, parameter biasing=15)
+#(parameter mantissaWidth = 23, parameter dataWidth = 32, parameter exponentWidth = 8, parameter biasing=127)
 (
  input [(dataWidth-1):0]FP1,  //Represents the first input of the floating point multiplier  
  input [(dataWidth-1):0]FP2,    //Represents the first input of the floating point multiplier

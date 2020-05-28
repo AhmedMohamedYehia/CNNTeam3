@@ -1,14 +1,19 @@
 //test bench for floating-point addition
 module add_flp3_tb;
-    reg [31:0] A, B;
-    wire sign_C;
-    wire [7:0] exp_C;
-    wire [22:0] mantissa_C;
+    reg [15:0] A, B;
+    wire [15:0] sum;
     initial //display variables
-    $monitor ("sign=%b, exp_biased=%b, sum=%b",
-    sign_C, exp_C, mantissa_C);
-    initial //apply input vectors
+    //$monitor ("sign=%b, exp_biased=%b, sum=%b",
+    //sign_C, exp_C, mantissa_C);
+    //initial //apply input vectors
     begin
+    
+    
+        //-7.25 + + 0.375 = -6.875 (1100011011100000) 
+            // s ----e---- --------------M-------------
+            #0 A = 16'b1100011101000000;
+               B = 16'b0011011000000000;
+        /*    
         //-7.25 + + 0.375 = -6.875 (11000000110111000000000000000000) 
         // s ----e---- --------------M-------------
         #0 A = 32'b11000000111010000000000000000000;
@@ -27,14 +32,14 @@ module add_flp3_tb;
             
          //+1.9 + +2.8 = +4.7 (01000000100101100110011001100110) 
          // s ----e---- --------------M-------------
-         #40 A = 32'b00111111111100110011001100110011;
-             B = 32'b01000000001100110011001100110011;    
+        // #40 A = 32'b00111111111100110011001100110011;
+        //     B = 32'b01000000001100110011001100110011;    
              
              
           //+1.9 + -2.8 = -0.9 (10111111011001100110011001100110) 
           // s ----e---- --------------M-------------
           #50 A = 32'b00111111111100110011001100110011;
-              B = 32'b11000000001100110011001100110011;        
+              B = 32'b11000000001100110011001100110011;     */  
             
             
             
@@ -45,8 +50,6 @@ module add_flp3_tb;
     Fp_Add fp_add1 ( //instantiate the module
     .A_FP(A),
     .B_FP(B),
-    .sign(sign_C),
-    .exponent(exp_C),
-    .mantissa(mantissa_C)
+    .SUM_FP(sum)
     );
 endmodule

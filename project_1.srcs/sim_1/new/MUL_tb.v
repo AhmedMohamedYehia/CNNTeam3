@@ -53,23 +53,24 @@ endmodule*/
  //test bench for floating-point multiplication
 `timescale 1ns / 1ps
 module FPMU1_tb();
-reg [31:0] flp_a;
-reg [31:0]flp_b;
-wire sign;
-wire [7:0] exponent;
-wire [22:0] prod;
+reg [15:0] flp_a;
+reg [15:0]flp_b;
+wire [15:0]f1p_product;
 //display variables
 
 initial
 begin
 
+
+//Result is (0100010010001101)
+flp_a =16'b0100001100000000;
+flp_b =16'b0011110100110011;
+
+/*
+//Result is (00111100010110110000001011000110)
 flp_a =32'b01000000011000000000000000000000;
 flp_b =32'b00111011011110100100110001010000;
 
-
-//flp_a =32'b00111111101001100110011001100110; //1.3
-//flp_b =32'b01000000101111001100110011001101; //5.9
-//// the expected result 7.67 :010000001 11101010111000010100011
 
  #5 flp_a =32'b00111111111100110011001100110011;//1.9
  flp_b =32'b01000000001100110011001100110011;//2.8
@@ -84,15 +85,13 @@ flp_b =32'b00111111100110011001100110011010;//1.2
 //// the expected result 3.84 :0 10000000 11101011100001010001111
 
 
-
+*/
 
 end
 //instantiate the module into the test bench
 Fp_Mul inst1 (
 flp_a,
 flp_b,
-sign,
-exponent,
-prod
+f1p_product
 );
 endmodule

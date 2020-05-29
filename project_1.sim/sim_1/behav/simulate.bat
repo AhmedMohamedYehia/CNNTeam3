@@ -1,6 +1,6 @@
 @echo off
-set xv_path=C:\\Vivado\\2015.2\\bin
-call %xv_path%/xsim add_flp3_tb_behav -key {Behavioral:sim_1:Functional:add_flp3_tb} -tclbatch add_flp3_tb.tcl -log simulate.log
+set xv_path=F:\\Vivado\\2015.2\\bin
+call %xv_path%/xsim Conv_Basic_tb_behav -key {Behavioral:sim_1:Functional:Conv_Basic_tb} -tclbatch Conv_Basic_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

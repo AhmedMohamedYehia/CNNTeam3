@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590736531">
-  <File Type="RDS-DCP" Name="Conv_Basic.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591122204">
+  <File Type="RDS-DCP" Name="SingleFilter_Conv.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="Conv_Basic_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="SingleFilter_Conv_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="Conv_Basic_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="Conv_Basic.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SingleFilter_Conv_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="SingleFilter_Conv.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="Conv_Basic.vds"/>
-  <File Type="RDS-UTIL" Name="Conv_Basic_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Conv_Basic_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Conv_Basic_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="SingleFilter_Conv.vds"/>
+  <File Type="RDS-UTIL" Name="SingleFilter_Conv_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SingleFilter_Conv_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SingleFilter_Conv_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/MUL.v">
@@ -34,7 +34,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/SingleFilter_Conv.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/tanh.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ManyFilters_Conv.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -44,7 +59,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Conv_Basic"/>
+      <Option Name="TopModule" Val="SingleFilter_Conv"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

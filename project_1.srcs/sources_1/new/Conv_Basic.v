@@ -1,17 +1,26 @@
+`timescale 1 ns / 1 ns
+//////////////////////////////////////////////////////////////////////////////////
+// Create Date: 28.05.2020 13:42:20
+// Design Name: PART 1 - (a)
+// Module Name: Conv_Basic
+// Project Name: CNN Final Assesment
+//////////////////////////////////////////////////////////////////////////////////
+
 //THIS MODULE TAKES PART OF AN IMAGE ARRAY 5*5 [imageArray] AND A FILTER 5*5 MATRIX [filterArray]
 //PERFORMING CONVOLUTION OPERATION
 //REULTS ONLY 1 ELEMENT [convOut]
-
-module Conv_Basic(clk,imageArray,filterArray,convOut);
+module Conv_Basic(clk,imageArray,filterArray,convOut,reset);
 
 parameter ROWSIZE =5;//The row size
 parameter COLUMNSIZE =5;//The column size
-parameter DATAWIDTH =16; //data width of each number either 16 or 32
-parameter LAST_ADDITION =2;
+parameter DATAWIDTH =32; //data width of each number either 16 or 32
+parameter LAST_ADDITION =2; //depends on the size of the filter 
 
 input clk;//The clock for the system
-input [(DATAWIDTH*ROWSIZE*COLUMNSIZE-1):0] imageArray; //Vector for the image matrix numbers
+input [31:0] imageArray [4:0][4:0];
+//input [(DATAWIDTH*ROWSIZE*COLUMNSIZE-1):0] imageArray; //Vector for the image matrix numbers
 input [(DATAWIDTH*ROWSIZE*COLUMNSIZE-1):0] filterArray; //Vector for the filter matrix numbers
+input reset; //to proccess a new input pixel
 output reg [(DATAWIDTH-1):0] convOut; //The output of the conv layer 
 
 //intermediate parameters
@@ -129,7 +138,13 @@ Fp_Mul convMul5(
 
 always@(posedge clk)
 begin
-    if(i < 25)  //performing element wise multiplication by passing elements to the 5 adders in parallel 
+    if(reset ==1)
+    begin
+        i =0;
+        j=0;
+        k=0;
+    end
+    else if(i < 25)  //performing element wise multiplication by passing elements to the 5 adders in parallel 
                 //needs 5 clk cycles (5*5 elements and each clk cycle only multiply 1*1 -> 5 times)
     begin
         InputA1 <= imageArray[i*DATAWIDTH+:DATAWIDTH];
@@ -231,7 +246,7 @@ begin
             mulResult[(j+2)*DATAWIDTH+:DATAWIDTH] <= MulOutput3;
             mulResult[(j+3)*DATAWIDTH+:DATAWIDTH] <= MulOutput4;
             mulResult[(j+4)*DATAWIDTH+:DATAWIDTH] <= MulOutput5;
-             j= j+5;
+            j= j+5;
     end
     //adding first 2 rows && ACCUMELATION PROCCES 
     else if(i >= 26 && i < 33)

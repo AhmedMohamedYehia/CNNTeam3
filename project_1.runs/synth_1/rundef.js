@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Conv_Basic.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Conv_Basic.tcl" );
+         "-log SingleFilter_Conv.vds -m64 -mode batch -messageDb vivado.pb -notrace -source SingleFilter_Conv.tcl" );
 
 
 

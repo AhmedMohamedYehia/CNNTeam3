@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Conv_Basic.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Conv_Basic.tcl
+EAStep vivado -log SingleFilter_Conv.vds -m64 -mode batch -messageDb vivado.pb -notrace -source SingleFilter_Conv.tcl

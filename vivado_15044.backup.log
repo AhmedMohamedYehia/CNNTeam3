@@ -1,0 +1,448 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Jun 01 09:58:36 2020
+# Process ID: 11676
+# Log file: F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/vivado.log
+# Journal file: F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 768.109 ; gain = 195.148
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'SingleFilter_Conv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj SingleFilter_Conv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Basic
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv_tb
+WARNING: [VRFC 10-986] literal value truncated to fit in 3200 bits [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v:34]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: F:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleFilter_Conv_tb_behav xil_defaultlib.SingleFilter_Conv_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.Fp_Mul
+Compiling module xil_defaultlib.Conv_Basic
+Compiling module xil_defaultlib.SingleFilter_Conv
+Compiling module xil_defaultlib.SingleFilter_Conv_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot SingleFilter_Conv_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/Vivado/PROJECTS/final -notrace
+invalid command name "******"
+ambiguous command name "******": after append apply array auto_execok auto_import auto_load auto_load_index auto_qualify binary break case catch cd chan clock close close_msg_db cmd concat continue create_msg_db create_property dict encoding eof error eval exec exit expr fblocked fconfigure fcopy file fileevent flush for foreach format get_msg_config get_param get_property gets glob global help history if incr info interp join lappend lassign lindex linsert lint_files list list_param list_property list_property_value llength load load_msg_db lrange lrepeat lreplace lreverse lsearch lset lsort namespace open package pid proc puts pwd read regexp register_proc regsub rename report_environment report_param report_property reset_msg_config reset_msg_count reset_param reset_property return scan seek send_msg_id set set_msg_config set_param set_property socket source split string subst switch tclLog tell time trace unknown unload unregister_proc unset update uplevel upvar variable version vwait webtalk_add_data webtalk_dump_data webtalk_init webtalk_register_client webtalk_terminate webtalk_transmit while
+    while executing
+"****** Webtalk v2015.2 (64-bit)"
+    (file "F:/Vivado/PROJECTS/final" line 2)
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 01 10:04:29 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SingleFilter_Conv_tb_behav -key {Behavioral:sim_1:Functional:SingleFilter_Conv_tb} -tclbatch {SingleFilter_Conv_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source SingleFilter_Conv_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SingleFilter_Conv_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 801.570 ; gain = 3.238
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'SingleFilter_Conv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj SingleFilter_Conv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Basic
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: F:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleFilter_Conv_tb_behav xil_defaultlib.SingleFilter_Conv_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" Line 9. Module SingleFilter_Conv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" Line 9. Module SingleFilter_Conv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.Fp_Mul
+Compiling module xil_defaultlib.Conv_Basic
+Compiling module xil_defaultlib.SingleFilter_Conv
+Compiling module xil_defaultlib.SingleFilter_Conv_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot SingleFilter_Conv_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/Vivado/PROJECTS/final -notrace
+invalid command name "******"
+ambiguous command name "******": after append apply array auto_execok auto_import auto_load auto_load_index auto_qualify binary break case catch cd chan clock close close_msg_db cmd concat continue create_msg_db create_property dict encoding eof error eval exec exit expr fblocked fconfigure fcopy file fileevent flush for foreach format get_msg_config get_param get_property gets glob global help history if incr info interp join lappend lassign lindex linsert lint_files list list_param list_property list_property_value llength load load_msg_db lrange lrepeat lreplace lreverse lsearch lset lsort namespace open package pid proc puts pwd read regexp register_proc regsub rename report_environment report_param report_property reset_msg_config reset_msg_count reset_param reset_property return scan seek send_msg_id set set_msg_config set_param set_property socket source split string subst switch tclLog tell time trace unknown unload unregister_proc unset update uplevel upvar variable version vwait webtalk_add_data webtalk_dump_data webtalk_init webtalk_register_client webtalk_terminate webtalk_transmit while
+    while executing
+"****** Webtalk v2015.2 (64-bit)"
+    (file "F:/Vivado/PROJECTS/final" line 2)
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 01 10:43:17 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SingleFilter_Conv_tb_behav -key {Behavioral:sim_1:Functional:SingleFilter_Conv_tb} -tclbatch {SingleFilter_Conv_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source SingleFilter_Conv_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SingleFilter_Conv_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 836.695 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'SingleFilter_Conv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj SingleFilter_Conv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Basic
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv_tb
+ERROR: [VRFC 10-794] illegal character in binary number [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v:35]
+ERROR: [VRFC 10-794] illegal character in binary number [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v:36]
+ERROR: [VRFC 10-1040] module SingleFilter_Conv_tb ignored due to previous errors [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v:23]
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'SingleFilter_Conv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj SingleFilter_Conv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Basic
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: F:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleFilter_Conv_tb_behav xil_defaultlib.SingleFilter_Conv_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" Line 9. Module SingleFilter_Conv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" Line 9. Module SingleFilter_Conv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" Line 4. Module Fp_Add doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" Line 3. Module Fp_Mul doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.Fp_Mul
+Compiling module xil_defaultlib.Conv_Basic
+Compiling module xil_defaultlib.SingleFilter_Conv
+Compiling module xil_defaultlib.SingleFilter_Conv_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot SingleFilter_Conv_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/Vivado/PROJECTS/final -notrace
+invalid command name "******"
+ambiguous command name "******": after append apply array auto_execok auto_import auto_load auto_load_index auto_qualify binary break case catch cd chan clock close close_msg_db cmd concat continue create_msg_db create_property dict encoding eof error eval exec exit expr fblocked fconfigure fcopy file fileevent flush for foreach format get_msg_config get_param get_property gets glob global help history if incr info interp join lappend lassign lindex linsert lint_files list list_param list_property list_property_value llength load load_msg_db lrange lrepeat lreplace lreverse lsearch lset lsort namespace open package pid proc puts pwd read regexp register_proc regsub rename report_environment report_param report_property reset_msg_config reset_msg_count reset_param reset_property return scan seek send_msg_id set set_msg_config set_param set_property socket source split string subst switch tclLog tell time trace unknown unload unregister_proc unset update uplevel upvar variable version vwait webtalk_add_data webtalk_dump_data webtalk_init webtalk_register_client webtalk_terminate webtalk_transmit while
+    while executing
+"****** Webtalk v2015.2 (64-bit)"
+    (file "F:/Vivado/PROJECTS/final" line 2)
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 01 11:33:58 2020...
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SingleFilter_Conv_tb_behav -key {Behavioral:sim_1:Functional:SingleFilter_Conv_tb} -tclbatch {SingleFilter_Conv_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source SingleFilter_Conv_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SingleFilter_Conv_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 852.637 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'SingleFilter_Conv_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj SingleFilter_Conv_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fp_Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Basic
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sim_1/new/SingleFilter_Conv_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleFilter_Conv_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: F:/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto b1616306e2754361881eaf2e8e4c5115 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleFilter_Conv_tb_behav xil_defaultlib.SingleFilter_Conv_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Fp_Add
+Compiling module xil_defaultlib.Fp_Mul
+Compiling module xil_defaultlib.Conv_Basic
+Compiling module xil_defaultlib.SingleFilter_Conv
+Compiling module xil_defaultlib.SingleFilter_Conv_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot SingleFilter_Conv_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/Vivado/PROJECTS/final -notrace
+invalid command name "******"
+ambiguous command name "******": after append apply array auto_execok auto_import auto_load auto_load_index auto_qualify binary break case catch cd chan clock close close_msg_db cmd concat continue create_msg_db create_property dict encoding eof error eval exec exit expr fblocked fconfigure fcopy file fileevent flush for foreach format get_msg_config get_param get_property gets glob global help history if incr info interp join lappend lassign lindex linsert lint_files list list_param list_property list_property_value llength load load_msg_db lrange lrepeat lreplace lreverse lsearch lset lsort namespace open package pid proc puts pwd read regexp register_proc regsub rename report_environment report_param report_property reset_msg_config reset_msg_count reset_param reset_property return scan seek send_msg_id set set_msg_config set_param set_property socket source split string subst switch tclLog tell time trace unknown unload unregister_proc unset update uplevel upvar variable version vwait webtalk_add_data webtalk_dump_data webtalk_init webtalk_register_client webtalk_terminate webtalk_transmit while
+    while executing
+"****** Webtalk v2015.2 (64-bit)"
+    (file "F:/Vivado/PROJECTS/final" line 2)
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 01 11:35:20 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 900.383 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SingleFilter_Conv_tb_behav -key {Behavioral:sim_1:Functional:SingleFilter_Conv_tb} -tclbatch {SingleFilter_Conv_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+source SingleFilter_Conv_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SingleFilter_Conv_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 900.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 900.383 ; gain = 0.000
+set_property top SingleFilter_Conv [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v" into library work [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ADD.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v" into library work [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/Conv_Basic.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v" into library work [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/MUL.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v" into library work [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/SingleFilter_Conv.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/tanh.v" into library work [F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/tanh.v:1]
+[Mon Jun 01 14:59:17 2020] Launched synth_1...
+Run output will be captured here: F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.runs/synth_1/runme.log
+reset_run synth_1
+close [ open {F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ManyFilters_Conv.v} w ]
+add_files {{F:/Vivado/PROJECTS/final assessment/CNN/CNNTeam3/project_1.srcs/sources_1/new/ManyFilters_Conv.v}}
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 01 18:27:03 2020...
